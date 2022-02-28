@@ -1,3 +1,4 @@
+testName, long amount, boolean registered, long expected
 registeredUserAndUnderLimit,100060,true,30
 registeredUserAndOverLimit,100000060,true,500
 unRegisteredUserAndUnderLimit,100060,false,10

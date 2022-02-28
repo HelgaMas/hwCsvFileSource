@@ -3,12 +3,12 @@ package ru.netology.bonus;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class BonusServiceTestCsv {
+public class BonusServiceCsvTest {
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/data.csv")
+    @CsvFileSource(resources = "/data.csv", delimiter = ',', numLinesToSkip = 1)
     void shouldCalculateForDifferentUsers(String testName, long amount, boolean registered, long expected) {
 
         BonusService service = new BonusService();
